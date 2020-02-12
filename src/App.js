@@ -1,6 +1,6 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Card from './Card.js'
 import Button from './Button.js';
 import Link from './Link.js';
 
@@ -8,29 +8,40 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      buttonToggle: true
+      randomIndex: 1,
+      animateIn: true
     }
 
-  this.newQuote = this.newQuote.bind(this);
-
+  this.disCard = this.disCard.bind(this);
+  this.randomQuote = this.randomQuote.bind(this);
   }
 
-  newQuote() {
+  disCard() {
     this.setState({
-      buttonToggle: !this.state.buttonToggle
+      animateIn: !this.state.animateIn
     });
+  }
+
+  randomQuote() {
+    if(!this.state.animateIn) {
+      let newIndex = 0;
+      this.setState({
+        randomIndex: newIndex,
+        animateIn: true
+      });
+    }
   }
 
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>
-              {this.state.buttonToggle ? this.props.msg : "push that button"}
-              </code> and save to reload.
-          </p>
+      <div id="quote-box" className="App">
+        <Card 
+          id="text"
+          animateIn={this.state.animateIn}
+          newQuote={this.randomQuote}
+          quote={this.state.randomIndex}
+        >
+        </Card>
           <Link
             id="tweet-quote"
             href="twitter.com/intent/tweet"
@@ -40,10 +51,9 @@ class App extends React.Component {
           />
           <Button
            id="new-quote"
-           onClick={this.newQuote}
+           onClick={this.disCard}
            label="Quoteme!"
           />
-        </header>
       </div>
     );
   }

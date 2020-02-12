@@ -1,0 +1,30 @@
+.card-in {
+    animation: text-appear 2s ease-out 1;
+}
+.card-out {
+    animation: text-disappear 0.5s ease-out 0.2s 1 forwards;
+}
+
+@keyframes text-appear {
+    0%{
+        visibility: visible;
+        opacity: 0;
+        transform: scale(0.1);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes text-disappear {
+    0%{
+        visibility: visible;
+        transform: scale(1);
+    }
+    100%{
+        opacity: 0;
+        transform: scale(0.1);
+        visibility: hidden;
+    }
+}
