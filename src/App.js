@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Button from './Button.js';
+import Link from './Link.js';
 
 class App extends React.Component {
   constructor(props) {
@@ -30,15 +31,18 @@ class App extends React.Component {
               {this.state.buttonToggle ? this.props.msg : "push that button"}
               </code> and save to reload.
           </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
+          <Link
+            id="tweet-quote"
+            href="twitter.com/intent/tweet"
             target="_blank"
             rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          <Button id="new-quote" onClick={this.newQuote} label="Quoteme!" />
+            label="tweet!"
+          />
+          <Button
+           id="new-quote"
+           onClick={this.newQuote}
+           label="Quoteme!"
+          />
         </header>
       </div>
     );
