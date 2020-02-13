@@ -1,6 +1,7 @@
 import React from 'react'
 import './App.css'
 import Card from './Card.js'
+import Author from './Author.js'
 import Button from './Button.js'
 import Link from './Link.js'
 import quotes from './quotes.json'
@@ -40,20 +41,22 @@ class App extends React.Component {
   render () {
     return (
       <div id="quote-box" className="App">
-        <Card
-          id="text"
-          animateIn={this.state.animateIn}
-          newQuote={this.randomQuote}
-          quote={quotes[this.state.randomIndex].quote}
-        >
-        </Card>
-        <Link
-          id="tweet-quote"
-          href="twitter.com/intent/tweet"
-          target="_blank"
-          rel="noopener noreferrer"
-          label="tweet!"
-        />
+        <div id="quote-card">
+          <Card
+            id="text"
+            animateIn={this.state.animateIn}
+            newQuote={this.randomQuote}
+            quote={quotes[this.state.randomIndex].quote}
+          />
+          <Author id="author" author={quotes[this.state.randomIndex].author} />
+          <Link
+            id="tweet-quote"
+            href="twitter.com/intent/tweet"
+            target="_blank"
+            rel="noopener noreferrer"
+            label="tweet!"
+          />
+        </div>
         <Button
           id="new-quote"
           onClick={this.disCard}
