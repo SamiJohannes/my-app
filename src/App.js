@@ -3,12 +3,13 @@ import './App.css';
 import Card from './Card.js'
 import Button from './Button.js';
 import Link from './Link.js';
+import quotes from './quotes.json';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      randomIndex: 1,
+      randomIndex: Math.floor(Math.random() * 10),
       animateIn: true
     }
 
@@ -39,7 +40,7 @@ class App extends React.Component {
           id="text"
           animateIn={this.state.animateIn}
           newQuote={this.randomQuote}
-          quote={this.state.randomIndex}
+          quote={quotes[this.state.randomIndex].quote}
         >
         </Card>
           <Link
