@@ -1,11 +1,19 @@
-import React from 'react';
-import './Card.css';
+import React from 'react'
+import PropTypes from 'prop-types'
+import './Card.css'
 
 const Card = (props) => <p
-    id={props.id}
-    className={props.animateIn? "card-in" : "card-out"}
-    onAnimationEnd={props.newQuote}
-    >{props.quote}
-    </p>;
+  id={props.id}
+  className={props.animateIn ? 'card-in' : 'card-out'}
+  onAnimationEnd={props.newQuote}
+>{props.quote}
+</p>
 
-export default Card;
+Card.propTypes = {
+  id: PropTypes.string,
+  animateIn: PropTypes.bool,
+  newQuote: PropTypes.func,
+  quote: PropTypes.string
+}
+
+export default Card

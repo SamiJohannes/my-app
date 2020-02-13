@@ -26,7 +26,10 @@ class App extends React.Component {
   randomQuote () {
     if (!this.state.animateIn) {
       console.log(this.state.randomIndex)
-      const newIndex = 0
+      let newIndex = 0
+      do {
+        newIndex = Math.floor(Math.random() * 10)
+      } while (newIndex === this.state.randomIndex)
       this.setState({
         randomIndex: newIndex,
         animateIn: true
