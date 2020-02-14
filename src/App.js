@@ -47,15 +47,16 @@ class App extends React.Component {
             animateIn={this.state.animateIn}
             newQuote={this.randomQuote}
             quote={quotes[this.state.randomIndex].quote}
-          />
-          <Author id="author" author={quotes[this.state.randomIndex].author} />
-          <Link
-            id="tweet-quote"
-            href="twitter.com/intent/tweet"
-            target="_blank"
-            rel="noopener noreferrer"
-            label="tweet!"
-          />
+          >
+            <Author id="author" author={quotes[this.state.randomIndex].author} />
+            <Link
+              id="tweet-quote"
+              href="twitter.com/intent/tweet"
+              target="_blank"
+              rel="noopener noreferrer"
+              label="tweet!"
+            />
+          </Card>
         </div>
         <Button
           id="new-quote"
