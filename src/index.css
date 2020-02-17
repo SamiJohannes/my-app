@@ -1,6 +1,12 @@
 :root {
   --bg-color1: #ffc33f;
   --bg-color2: #ff7c00;
+  --card-color: #38bad2;
+  --card-border: #01758a;
+  --card-shadow: rgba(89, 89, 89, .7);
+  --card-inset: rgba(89, 89, 89, .4);
+}
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;

@@ -3,8 +3,11 @@
 }
 
 div #quote-box {
-  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
   perspective: 800px;
   transform-style: preserve-3d;
-  padding: 3em 1em 0 1em;
+  padding: 0 1em;
 }

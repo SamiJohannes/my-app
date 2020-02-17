@@ -41,23 +41,24 @@ class App extends React.Component {
   render () {
     return (
       <div id="quote-box" className="App">
-        <div id="quote-card">
-          <Card
-            id="text"
-            animateIn={this.state.animateIn}
-            newQuote={this.randomQuote}
-            quote={quotes[this.state.randomIndex].quote}
+        <Card
+          id="text"
+          animateIn={this.state.animateIn}
+          newQuote={this.randomQuote}
+          quote={quotes[this.state.randomIndex].quote}
+        >
+          <Author
+            id="author"
+            author={quotes[this.state.randomIndex].author}
           >
-            <Author id="author" author={quotes[this.state.randomIndex].author} />
             <Link
               id="tweet-quote"
               href="twitter.com/intent/tweet"
               target="_blank"
               rel="noopener noreferrer"
-              label="tweet!"
             />
-          </Card>
-        </div>
+          </Author>
+        </Card>
         <Button
           id="new-quote"
           onClick={this.disCard}
