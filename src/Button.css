@@ -1,0 +1,19 @@
+#new-quote {
+  align-self: center;
+  position: fixed;
+  top: 85%;
+  font-size: 1.2em;
+  padding: .3em .4em;
+  background-color: var(--button-color);
+  border: 3px solid var(--button-border);
+  border-radius: 10px;
+  box-shadow: .2em .2em .2em var(--button-shadow), 0 0 .2em .17em var(--button-inset) inset;
+  transition: 1s;
+}
+
+#new-quote:hover, #new-quote:focus {
+  outline-style: none;
+  border-radius: 18px;
+  background-color: #96d5e0;
+  color: black;
+}
