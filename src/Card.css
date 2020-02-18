@@ -2,6 +2,8 @@ p#text {
   background-color: var(--card-color);
   display: flex;
   flex-direction: column;
+  align-self: center;
+  max-width: 350px;
   margin: 0;
   padding: .4em .5em;
   text-align: center;
