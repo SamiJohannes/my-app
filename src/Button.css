@@ -5,15 +5,21 @@
   font-size: 1.2em;
   padding: .3em .4em;
   background-color: var(--button-color);
-  border: 3px solid var(--button-border);
+  border-width: 3px;
+  border-color: var(--button-border);
+  border-style: hidden;
+  border-right-style: ridge;
+  border-bottom-style: ridge;
   border-radius: 10px;
   box-shadow: .2em .2em .2em var(--button-shadow), 0 0 .2em .17em var(--button-inset) inset;
   transition: 1s;
 }
 
 #new-quote:hover, #new-quote:focus {
-  outline-style: none;
-  border-radius: 18px;
+outline-style: unset;
   background-color: #96d5e0;
   color: black;
+}
+#new-quote:hover {
+  border-radius: 18px;
 }

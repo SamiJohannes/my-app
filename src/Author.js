@@ -2,9 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import './Author.css'
 
-const Author = (props) => <h1
+const Author = (props) => <p
   id={props.id}
->{props.author}{props.children}</h1>
+>{props.author}{props.children}</p>
 
 Author.propTypes = {
   id: PropTypes.string,

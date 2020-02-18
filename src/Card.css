@@ -1,14 +1,14 @@
-p#text {
+h1#text {
   background-color: var(--card-color);
   display: flex;
   flex-direction: column;
   align-self: center;
   max-width: 350px;
   margin: 0;
-  padding: .4em .5em;
+  padding: .4em .55em;
   text-align: center;
   font-size: 1.2em;
-  font-weight: 600;
+  font-weight: 500;
   font-style: italic;
   border: 3px solid var(--card-border);
   box-shadow: .2em .2em .4em var(--card-shadow), 0 0 .5em .3em var(--card-inset) inset;

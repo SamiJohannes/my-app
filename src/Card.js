@@ -2,12 +2,12 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import './Card.css'
 
-const Card = (props) => <p
+const Card = (props) => <h1
   id={props.id}
   className={props.animateIn ? 'card-in' : 'card-out'}
   onAnimationEnd={props.newQuote}
 >{'"'}{props.quote}{'"'}{props.children}
-</p>
+</h1>
 
 Card.propTypes = {
   id: PropTypes.string,
