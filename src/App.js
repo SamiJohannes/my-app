@@ -53,7 +53,7 @@ class App extends React.Component {
           >
             <Link
               id="tweet-quote"
-              href="twitter.com/intent/tweet"
+              href="https://twitter.com/intent/tweet"
               target="_blank"
               rel="noopener noreferrer"
             />
