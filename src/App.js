@@ -26,7 +26,6 @@ class App extends React.Component {
 
   randomQuote () {
     if (!this.state.animateIn) {
-      console.log(this.state.randomIndex)
       let newIndex = 0
       do {
         newIndex = Math.floor(Math.random() * 10)
@@ -40,7 +39,10 @@ class App extends React.Component {
 
   render () {
     const quoteData = quotes[this.state.randomIndex]
-    const tweetHref = 'https://twitter.com/intent/tweet?text=' + '"' + quoteData.quote + '"' + '%0A%0A' + quoteData.author
+    const tweetHref = 'https://twitter.com/intent/tweet?text="' +
+      (/;/.test(quoteData.quote) ? quoteData.quote.replace(/;/, '%3B') : quoteData.quote) +
+      '"%0A%0A' +
+      quoteData.author
     return (
       <div id="quote-box" className="App">
         <Card
